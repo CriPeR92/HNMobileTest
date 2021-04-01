@@ -7,6 +7,7 @@ HN Mobile Test is a Native Android app developed using [Kotlin](https://kotlinla
 -  [Retrofit](http://square.github.io/retrofit/) : A type-safe REST client for Android which intelligently maps an API into a client interface using annotations.
 
 -  [Room](https://developer.android.com/training/data-storage/room/) : Room provides an abstraction layer over SQLite to allow fluent database access while harnessing the full power of SQLite
+-  [SwipeRevealLayout](https://github.com/chthai64/SwipeRevealLayout) : SwipeRevealLayout provides a layout that you can swipe/slide to show another layout.
 
 ## What it does
 
