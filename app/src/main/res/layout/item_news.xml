@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="news"
+            type="com.example.hnmobiletest.models.Hits" />
+
+        <variable
+            name="viewModel"
+            type="com.example.hnmobiletest.viewModels.NewsViewModel" />
+
+    </data>
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:mode="same_level"
+        app:dragEdge="right">
+
+        <!-- Your secondary layout here -->
+        <LinearLayout
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:onClick="@{() -> viewModel.onClickDelete(news, 2)}">
+            <TextView
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:text="@{String.format(@string/delete)}"/>
+        </LinearLayout>
+
+        <!-- Your main layout here -->
+        <RelativeLayout
+            android:id="@+id/linear_news"
+            android:onClick="@{() -> viewModel.onClickActionGridAdapter(news, 1)}"
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/news_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:maxLines="2"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@{news.setTitle}" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/news_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:textStyle="normal"
+                        android:text="@{news.author}"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:text="@{news.dateFormatted}"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/design_default_color_primary_dark"/>
+
+        </RelativeLayout>
+
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+
+
+
+</layout>
