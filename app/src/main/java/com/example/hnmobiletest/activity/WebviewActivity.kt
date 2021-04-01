@@ -1,12 +1,10 @@
 package com.example.hnmobiletest.activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.hnmobiletest.R
-import com.example.hnmobiletest.adapter.NewsAdapter
 import com.example.hnmobiletest.databinding.ActivityWebviewBinding
 import com.example.hnmobiletest.models.SessionData
 import com.example.hnmobiletest.viewModels.ViewModelFactory

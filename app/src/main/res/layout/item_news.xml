@@ -5,7 +5,7 @@
     <data>
         <variable
             name="news"
-            type="com.example.hnmobiletest.models.Hits" />
+            type="com.example.hnmobiletest.data.News" />
 
         <variable
             name="viewModel"

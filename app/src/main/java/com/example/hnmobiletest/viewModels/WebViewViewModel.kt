@@ -1,18 +1,15 @@
 package com.example.hnmobiletest.viewModels
 
-import android.view.View
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.ProgressBar
-import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.hnmobiletest.models.Hits
+import com.example.hnmobiletest.data.News
 
 
-class WebViewViewModel(news: Hits?): ViewModel() {
+class WebViewViewModel(news: News?): ViewModel() {
 
     val uiEventValue = MutableLiveData<Int>()
 

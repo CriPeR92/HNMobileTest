@@ -1,6 +1,5 @@
 package com.example.hnmobiletest.utils.retrofit
 
-
 import com.example.hnmobiletest.models.NewsResponse
 import retrofit2.Call
 import retrofit2.http.GET
